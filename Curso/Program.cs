@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 
 namespace Curso
 {
-    using System;
-
     class Program
     {
         static void Main()
@@ -28,36 +26,12 @@ namespace Curso
                 switch (escolha)
                 {
                     case 1:
-                        Console.WriteLine("========================= Soma de Números Inteiros =========================");
-                        Console.WriteLine("\nPor gentileza, digite o valor 1");
-                        int valor1 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("Digite o valor 2");
-                        int valor2 = int.Parse(Console.ReadLine());
-
-                        int resultado = valor1 + valor2;
-                        Console.WriteLine($"O resultado é: {resultado}");
+                        Soma soma = new Soma();
+                        soma.SomaCalc();
                         break;
                     case 2:
-                        Console.WriteLine("========================= Resultado de Diferença =========================");
-                        Console.WriteLine("Seja bem vindo ao programa que lerá quatro valores inteiros A, B, C e D.");
-                        Console.WriteLine("Será calculado e mostrado a diferença do produto onde A e B pelo produto de C e D.");
-
-                        Console.WriteLine("\nPor gentileza, digite o primeiro valor:");
-                        int val1 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("\nPor gentileza, digite o segundo valor:");
-                        int val2 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("\nPor gentileza, digite o terceiro valor:");
-                        int val3 = int.Parse(Console.ReadLine());
-                        Console.WriteLine("\nPor gentileza, digite o quarto valor:");
-                        int val4 = int.Parse(Console.ReadLine());
-
-                        int result1 = val1 + val2;
-                        int result2 = val3 + val4;
-
-                        int resulDiferença = result1 - result2;
-                        Console.WriteLine($"A soma do primeiro resultado: {result1}.\n" +
-                            $"A soma do segundo resultado: {result2}.\n" +
-                            $"A diferença entre esses valores é de: {resulDiferença}.");
+                        Diferenca diferenca = new Diferenca();
+                        diferenca.Calc();
                         break;
                     case 0:
                         Console.WriteLine("Saindo do programa. Até mais!");
